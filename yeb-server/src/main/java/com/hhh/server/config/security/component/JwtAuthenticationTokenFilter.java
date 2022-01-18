@@ -1,5 +1,6 @@
-package com.hhh.server.config.security;
+package com.hhh.server.config.security.component;
 
+import com.hhh.server.config.security.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -22,30 +23,29 @@ import java.io.IOException;
  * @date 2022/1/21
  * @Version 1.0.0
  */
+public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
-public class JwtAuthencationTokenFilter extends OncePerRequestFilter {
-
+    @Autowired
+    private UserDetailsService userDetailsService;
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
     @Value("${jwt.tokenHeader}")
     private String tokenHeader;
     @Value("${jwt.tokenHead}")
     private String tokenHead;
-    @Autowired
-    private JwtTokenUtil jwtTokenUtil;
-    @Autowired
-    private UserDetailsService userDetailsService;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain
             filterChain) throws ServletException, IOException {
-        String authHeader = request.getHeader(tokenHeader);
+        String authHeader = request.getHeader(this.tokenHeader);
         //存在token
-        if (null != authHeader && authHeader.startsWith(tokenHead)) {
+        if (null != authHeader && authHeader.startsWith(this.tokenHead)) {
             String authToken = authHeader.substring(tokenHead.length());
             String username = jwtTokenUtil.getUserNameFromToken(authToken);
             //token存在用户名但未登录
             if (null != username && null == SecurityContextHolder.getContext().getAuthentication()) {
                 //登录
-                UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+                UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
                 //验证token是否有效,重新设置用户对象
                 if (jwtTokenUtil.validateToken(tokenHead, userDetails)) {
                     UsernamePasswordAuthenticationToken authenticationToken = new
@@ -54,7 +54,7 @@ public class JwtAuthencationTokenFilter extends OncePerRequestFilter {
                     SecurityContextHolder.getContext().setAuthentication(authenticationToken);
                 }
             }
-            filterChain.doFilter(request, response);
         }
+        filterChain.doFilter(request, response);
     }
 }

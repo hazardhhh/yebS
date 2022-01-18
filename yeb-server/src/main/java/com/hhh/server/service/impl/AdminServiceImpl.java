@@ -1,11 +1,14 @@
 package com.hhh.server.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hhh.server.config.security.JwtTokenUtil;
 import com.hhh.server.mapper.AdminMapper;
+import com.hhh.server.mapper.RoleMapper;
 import com.hhh.server.pojo.Admin;
 import com.hhh.server.pojo.RespBean;
+import com.hhh.server.pojo.Role;
 import com.hhh.server.service.IAdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -18,6 +21,7 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -47,11 +51,10 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
      *
      * @param username
      * @param password
-     * @param request
      * @return
      */
     @Override
-    public RespBean login(String username, String password, HttpServletRequest request) {
+    public RespBean login(String username, String password) {
         //登录
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
         if(null == userDetails || !passwordEncoder.matches(password, userDetails.getPassword())) {
@@ -67,11 +70,10 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
 
         //生成token
         String token = jwtTokenUtil.generateToken(userDetails);
-        Map<String,String> tokenMap = new HashMap<>();
+        Map<String, String> tokenMap = new HashMap<>();
         tokenMap.put("token", token);
         tokenMap.put("tokenHead", tokenHead);
-
-        return RespBean.success("登陆成功", tokenMap);
+        return RespBean.success("登录成功", tokenMap);
     }
 
     /**
@@ -82,7 +84,6 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
      */
     @Override
     public Admin getAdminByUserName(String username) {
-        return adminMapper.selectOne(new QueryWrapper<Admin>().eq("username", username).eq
-                ("enabled", true));
+        return adminMapper.selectOne(new QueryWrapper<Admin>().eq("username", username));
     }
 }

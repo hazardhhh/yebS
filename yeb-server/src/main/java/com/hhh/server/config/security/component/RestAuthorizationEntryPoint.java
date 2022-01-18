@@ -1,4 +1,4 @@
-package com.hhh.server.config.security;
+package com.hhh.server.config.security.component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hhh.server.pojo.RespBean;
@@ -27,7 +27,7 @@ public class RestAuthorizationEntryPoint implements AuthenticationEntryPoint {
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
-        RespBean bean = RespBean.error("尚未登陆, 请登录！");
+        RespBean bean = RespBean.error("权限不足，请联系管理员！");
         bean.setCode(401);
         out.write(new ObjectMapper().writeValueAsString(bean));
         out.flush();
