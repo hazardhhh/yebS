@@ -36,7 +36,7 @@ public class JwtTokenUtil {
         return Jwts.builder()
                 .setClaims(claims)
                 .setExpiration(generateExpirationDate())
-                .signWith(SignatureAlgorithm.ES512, secret)
+                .signWith(SignatureAlgorithm.HS512, secret)
                 .compact();
     }
 
@@ -153,8 +153,4 @@ public class JwtTokenUtil {
         Date expireDate = getExpiredDateFromToken(token);
         return expireDate.before(new Date());
     }
-
-
-
-
 }

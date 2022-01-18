@@ -36,7 +36,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain
-            filterChain) throws ServletException, IOException {
+            chain) throws ServletException, IOException {
         String authHeader = request.getHeader(this.tokenHeader);
         //存在token
         if (null != authHeader && authHeader.startsWith(this.tokenHead)) {
@@ -47,7 +47,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
                 //登录
                 UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
                 //验证token是否有效,重新设置用户对象
-                if (jwtTokenUtil.validateToken(tokenHead, userDetails)) {
+                if (jwtTokenUtil.validateToken(authToken, userDetails)) {
                     UsernamePasswordAuthenticationToken authenticationToken = new
                             UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                     authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
@@ -55,6 +55,6 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
                 }
             }
         }
-        filterChain.doFilter(request, response);
+        chain.doFilter(request, response);
     }
 }

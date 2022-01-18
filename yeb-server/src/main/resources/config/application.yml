@@ -28,20 +28,20 @@ spring:
       # 测试连接是否可用的查询语句
       connection-test-query: SELECT 1
 
-  # Mybatis-plus配置
-  mybatis-plus:
-  #配置Mapper映射文件
-  mapper-locations: classpath*:/mapper/*Mapper.xml
-  # 配置MyBatis数据返回类型别名（默认别名是类名）
-  type-aliases-package: com.hhh.server.pojo
-  configuration:
-    # 自动驼峰命名
-    map-underscore-to-camel-case: false
+# Mybatis-plus配置
+mybatis-plus:
+    #配置Mapper映射文件
+    mapper-locations: classpath*:/mapper/*Mapper.xml
+    # 配置MyBatis数据返回类型别名（默认别名是类名）
+    type-aliases-package: com.hhh.server.pojo
+    configuration:
+      # 自动驼峰命名
+      map-underscore-to-camel-case: false
 
 ## Mybatis SQL 打印(方法接口所在的包，不是Mapper.xml所在的包)
-  logging:
-    level:
-      com.hhh.server.mapper: debug
+logging:
+  level:
+    com.hhh.server.mapper: debug
 
 jwt:
   # JWT存储的请求头

@@ -51,10 +51,11 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
      *
      * @param username
      * @param password
+     * @param request
      * @return
      */
     @Override
-    public RespBean login(String username, String password) {
+    public RespBean login(String username, String password, HttpServletRequest request) {
         //登录
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
         if(null == userDetails || !passwordEncoder.matches(password, userDetails.getPassword())) {
@@ -84,6 +85,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
      */
     @Override
     public Admin getAdminByUserName(String username) {
-        return adminMapper.selectOne(new QueryWrapper<Admin>().eq("username", username));
+        return adminMapper.selectOne(new QueryWrapper<Admin>().eq("username", username).eq
+                ("enabled", true));
     }
 }
