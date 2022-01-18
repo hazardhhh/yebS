@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hhh.server.config.security.JwtTokenUtil;
 import com.hhh.server.mapper.AdminMapper;
 import com.hhh.server.pojo.Admin;
+import com.hhh.server.pojo.Menu;
 import com.hhh.server.pojo.RespBean;
 import com.hhh.server.service.IAdminService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**

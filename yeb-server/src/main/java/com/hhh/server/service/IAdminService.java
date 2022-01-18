@@ -2,9 +2,11 @@ package com.hhh.server.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hhh.server.pojo.Admin;
+import com.hhh.server.pojo.Menu;
 import com.hhh.server.pojo.RespBean;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * <p>
@@ -32,5 +34,4 @@ public interface IAdminService extends IService<Admin> {
      * @return
      */
     Admin getAdminByUserName(String username);
-
 }
