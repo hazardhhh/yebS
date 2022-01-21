@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e42c8bd-9a54-4567-80af-270af41787a6" name="Changes" comment="配置JwtTokenUtil">
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/config/security/JwtAuthencationTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/config/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/AdminLoginParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/RespBean.java" afterDir="false" />
+    <list default="true" id="0e42c8bd-9a54-4567-80af-270af41787a6" name="Changes" comment="登录之后返回token，获取当前登录用户信息，配置Security登录授权。">
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/config/Swagger2Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/config/security/RestAuthorizationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/config/security/RestfulAccessDeniedHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IAdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/AdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/config/security/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +47,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -73,7 +75,7 @@
       <recent name="D:\yeb\yeb-server\src\main\resources\config" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.YebApplication">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hhh.generator.CodeGenerator" />
       <module name="yeb-generator" />
@@ -87,8 +89,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="YebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="yeb-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hhh.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hhh.server.YebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.YebApplication" />
         <item itemvalue="Application.CodeGenerator" />
       </list>
     </recent_temporary>
@@ -109,7 +125,7 @@
       <workItem from="1642531886551" duration="154000" />
       <workItem from="1642532077530" duration="1712000" />
       <workItem from="1642730946961" duration="844000" />
-      <workItem from="1642733692902" duration="10853000" />
+      <workItem from="1642733692902" duration="14374000" />
     </task>
     <task id="LOCAL-00001" summary="逆向工程">
       <created>1642529998978</created>
@@ -125,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642742939455</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="登录之后返回token，获取当前登录用户信息，配置Security登录授权。">
+      <created>1642752363006</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642752363006</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +168,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="逆向工程" />
     <MESSAGE value="配置JwtTokenUtil" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置JwtTokenUtil" />
+    <MESSAGE value="登录之后返回token，获取当前登录用户信息，配置Security登录授权。" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录之后返回token，获取当前登录用户信息，配置Security登录授权。" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/yebS$YebApplication.ic" NAME="YebApplication Coverage Results" MODIFIED="1642756074853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.hhh.server.*</FILTER>
+    </SUITE>
   </component>
 </project>
