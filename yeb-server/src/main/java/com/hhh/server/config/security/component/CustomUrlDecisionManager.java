@@ -49,11 +49,11 @@ public class CustomUrlDecisionManager implements AccessDecisionManager {
 
   @Override
   public boolean supports(ConfigAttribute configAttribute) {
-    return true;
+    return false;
   }
 
   @Override
   public boolean supports(Class<?> aClass) {
-    return true;
+    return false;
   }
 }

@@ -50,14 +50,14 @@ spring:
         max-idle: 200
         # 最小空闲连接，默认 0
         min-idle: 5
-    # 哨兵模式
-    sentinel:
-      # 主节点名称
-      master: mymaster
-      # 密码
-      password: 111111
-      # 节点
-      nodes: 120.77.60.121:26379,120.77.60.121:26380,120.77.60.121:26381
+#    # 哨兵模式
+#    sentinel:
+#      # 主节点名称
+#      master: mymaster
+#      # 密码
+#      password: 111111
+#      # 节点
+#      nodes: 120.77.60.121:26379,120.77.60.121:26380,120.77.60.121:26381
 
 # Mybatis-plus配置
 mybatis-plus:
