@@ -4,13 +4,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.hhh.server.pojo.MailLog;
 
 /**
- * <p>
- *  服务类
- * </p>
+ * 服务类
  *
  * @author hhh
  * @since 2022-01-19
  */
-public interface IMailLogService extends IService<MailLog> {
-
-}
+public interface IMailLogService extends IService<MailLog> {}

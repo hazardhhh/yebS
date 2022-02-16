@@ -7,14 +7,11 @@ import com.hhh.server.service.IAdminRoleService;
 import org.springframework.stereotype.Service;
 
 /**
- * <p>
- *  服务实现类
- * </p>
+ * 服务实现类
  *
  * @author hhh
  * @since 2022-01-19
  */
 @Service
-public class AdminRoleServiceImpl extends ServiceImpl<AdminRoleMapper, AdminRole> implements IAdminRoleService {
-
-}
+public class AdminRoleServiceImpl extends ServiceImpl<AdminRoleMapper, AdminRole>
+    implements IAdminRoleService {}

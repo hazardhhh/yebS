@@ -7,14 +7,11 @@ import com.hhh.server.service.IMenuRoleService;
 import org.springframework.stereotype.Service;
 
 /**
- * <p>
- *  服务实现类
- * </p>
+ * 服务实现类
  *
  * @author hhh
  * @since 2022-01-19
  */
 @Service
-public class MenuRoleServiceImpl extends ServiceImpl<MenuRoleMapper, MenuRole> implements IMenuRoleService {
-
-}
+public class MenuRoleServiceImpl extends ServiceImpl<MenuRoleMapper, MenuRole>
+    implements IMenuRoleService {}

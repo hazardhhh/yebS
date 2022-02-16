@@ -7,14 +7,11 @@ import com.hhh.server.service.ISalaryAdjustService;
 import org.springframework.stereotype.Service;
 
 /**
- * <p>
- *  服务实现类
- * </p>
+ * 服务实现类
  *
  * @author hhh
  * @since 2022-01-19
  */
 @Service
-public class SalaryAdjustServiceImpl extends ServiceImpl<SalaryAdjustMapper, SalaryAdjust> implements ISalaryAdjustService {
-
-}
+public class SalaryAdjustServiceImpl extends ServiceImpl<SalaryAdjustMapper, SalaryAdjust>
+    implements ISalaryAdjustService {}

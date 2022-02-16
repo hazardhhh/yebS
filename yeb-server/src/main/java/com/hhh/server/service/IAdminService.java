@@ -2,36 +2,42 @@ package com.hhh.server.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hhh.server.pojo.Admin;
-import com.hhh.server.pojo.Menu;
 import com.hhh.server.pojo.RespBean;
+import com.hhh.server.pojo.Role;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
- * <p>
- *  服务类
- * </p>
+ * 服务类
  *
  * @author hhh
  * @since 2022-01-19
  */
 public interface IAdminService extends IService<Admin> {
-    /**
-     * 登录之后返回token
-     *
-     * @param username
-     * @param password
-     * @param code
-     * @return
-     */
-    RespBean login(String username, String password, String code, HttpServletRequest request);
+  /**
+   * 登录之后返回token
+   *
+   * @param username
+   * @param password
+   * @param code
+   * @return
+   */
+  RespBean login(String username, String password, String code, HttpServletRequest request);
 
-    /**
-     * 根据用户名获取用户
-     *
-     * @param username
-     * @return
-     */
-    Admin getAdminByUserName(String username);
+  /**
+   * 根据用户名获取用户
+   *
+   * @param username
+   * @return
+   */
+  Admin getAdminByUserName(String username);
+
+  /**
+   * 根据用户id查询角色列表
+   *
+   * @param adminId
+   * @return
+   */
+  List<Role> getRoles(Integer adminId);
 }

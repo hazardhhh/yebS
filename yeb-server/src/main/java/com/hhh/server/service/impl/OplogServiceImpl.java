@@ -7,14 +7,10 @@ import com.hhh.server.service.IOplogService;
 import org.springframework.stereotype.Service;
 
 /**
- * <p>
- *  服务实现类
- * </p>
+ * 服务实现类
  *
  * @author hhh
  * @since 2022-01-19
  */
 @Service
-public class OplogServiceImpl extends ServiceImpl<OplogMapper, Oplog> implements IOplogService {
-
-}
+public class OplogServiceImpl extends ServiceImpl<OplogMapper, Oplog> implements IOplogService {}
