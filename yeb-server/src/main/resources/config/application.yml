@@ -7,8 +7,8 @@ spring:
   # 数据源配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/yeb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-    username: root
+    url: jdbc:mysql://120.77.60.161:3306/hhh?characterEncoding=utf8&useSSL=false
+    username: hhh
     password: 111111
     hikari:
       # 连接池名
