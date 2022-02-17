@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e42c8bd-9a54-4567-80af-270af41787a6" name="Changes" comment="修改bug，注释哨兵模式，连接超时异常">
+    <list default="true" id="0e42c8bd-9a54-4567-80af-270af41787a6" name="Changes" comment=".">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/config/Swagger2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/config/Swagger2Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/config/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/config/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +56,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="17" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reactor" />
-  </component>
-  <component name="ReactorSettings">
-    <option name="notificationShown" value="true" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -124,6 +126,13 @@
       <workItem from="1642532077530" duration="1712000" />
       <workItem from="1642730946961" duration="844000" />
       <workItem from="1642733692902" duration="14374000" />
+      <workItem from="1644378081579" duration="674000" />
+      <workItem from="1644460758976" duration="3164000" />
+      <workItem from="1644809346786" duration="307000" />
+      <workItem from="1644888276345" duration="8360000" />
+      <workItem from="1644909659259" duration="11980000" />
+      <workItem from="1645066766245" duration="1008000" />
+      <workItem from="1645076992999" duration="1980000" />
     </task>
     <task id="LOCAL-00001" summary="逆向工程">
       <created>1642529998978</created>
@@ -146,14 +155,28 @@
       <option name="project" value="LOCAL" />
       <updated>1642752363006</updated>
     </task>
-    <task id="LOCAL-00004" summary="修改bug，注释哨兵模式，连接超时异常">
-      <created>1645027897113</created>
+    <task id="LOCAL-00004" summary="配置redis">
+      <created>1644378146438</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1645027897113</updated>
+      <updated>1644378146438</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="根据请求url判断角色">
+      <created>1644909446373</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1644909446373</updated>
+    </task>
+    <task id="LOCAL-00006" summary=".">
+      <created>1645066794756</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1645066794756</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,12 +197,10 @@
     <MESSAGE value="逆向工程" />
     <MESSAGE value="配置JwtTokenUtil" />
     <MESSAGE value="登录之后返回token，获取当前登录用户信息，配置Security登录授权。" />
-    <MESSAGE value="修改bug，注释哨兵模式，连接超时异常" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改bug，注释哨兵模式，连接超时异常" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="配置redis" />
+    <MESSAGE value="根据请求url判断角色" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/yebS$YebApplication.ic" NAME="YebApplication Coverage Results" MODIFIED="1642756074853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
