@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e42c8bd-9a54-4567-80af-270af41787a6" name="Changes" comment="连接远程数据库">
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/exception/GlobalException.java" afterDir="false" />
+    <list default="true" id="0e42c8bd-9a54-4567-80af-270af41787a6" name="Changes" comment="职位管理，职称管理接口实现">
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/PermissController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/JoblevelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/JoblevelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/PositionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/PositionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Joblevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Joblevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/MenuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/MenuRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/MenuRoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IMenuRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IMenuRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IMenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/MenuRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/MenuRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuRoleMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +147,8 @@
       <workItem from="1644909659259" duration="11980000" />
       <workItem from="1645066766245" duration="1008000" />
       <workItem from="1645076992999" duration="1980000" />
-      <workItem from="1645193113178" duration="8812000" />
+      <workItem from="1645193113178" duration="9473000" />
+      <workItem from="1645619366173" duration="7901000" />
     </task>
     <task id="LOCAL-00001" summary="逆向工程">
       <created>1642529998978</created>
@@ -194,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645118710339</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="职位管理，职称管理接口实现">
+      <created>1645365363735</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1645365363735</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +231,8 @@
     <MESSAGE value="根据请求url判断角色" />
     <MESSAGE value="." />
     <MESSAGE value="连接远程数据库" />
-    <option name="LAST_COMMIT_MESSAGE" value="连接远程数据库" />
+    <MESSAGE value="职位管理，职称管理接口实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="职位管理，职称管理接口实现" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
