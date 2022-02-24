@@ -111,5 +111,6 @@
         WHERE m1.id = m2.parentId
           AND m2.id = m3.parentId
           AND m3.enabled = TRUE
+        ORDER BY m1.id, m2.id, m3.id
     </select>
 </mapper>
