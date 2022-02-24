@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e42c8bd-9a54-4567-80af-270af41787a6" name="Changes" comment="1">
+    <list default="true" id="0e42c8bd-9a54-4567-80af-270af41787a6" name="Changes" comment="职位管理，职称管理接口实现">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/DepartmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/DepartmentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/DepartmentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IDepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IDepartmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/DepartmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/DepartmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/DepartmentMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +29,14 @@
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -132,7 +145,8 @@
       <workItem from="1644909659259" duration="11980000" />
       <workItem from="1645066766245" duration="1008000" />
       <workItem from="1645076992999" duration="1980000" />
-      <workItem from="1645667481052" duration="7297000" />
+      <workItem from="1645193113178" duration="9473000" />
+      <workItem from="1645619366173" duration="7901000" />
     </task>
     <task id="LOCAL-00001" summary="逆向工程">
       <created>1642529998978</created>
@@ -176,11 +190,36 @@
       <option name="project" value="LOCAL" />
       <updated>1645066794756</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="连接远程数据库">
+      <created>1645118710339</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1645118710339</updated>
+    </task>
+    <task id="LOCAL-00008" summary="职位管理，职称管理接口实现">
+      <created>1645365363735</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1645365363735</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -200,7 +239,9 @@
     <MESSAGE value="配置redis" />
     <MESSAGE value="根据请求url判断角色" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="连接远程数据库" />
+    <MESSAGE value="职位管理，职称管理接口实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="职位管理，职称管理接口实现" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
