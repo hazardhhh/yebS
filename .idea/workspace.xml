@@ -4,15 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e42c8bd-9a54-4567-80af-270af41787a6" name="Changes" comment="职位管理，职称管理接口实现">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0e42c8bd-9a54-4567-80af-270af41787a6" name="Changes" comment="存储过程脚本，获取部门，添加部门，删除部门接口实现">
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/AdminUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/config/MyBatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/converter/DateConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/RespPageBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/DepartmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/DepartmentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/DepartmentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IDepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IDepartmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/DepartmentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/DepartmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/DepartmentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/AdminRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/AdminRoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/EmployeeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IAdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IEmployeeEcService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IEmployeeEcService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IEmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/AdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/EmployeeEcServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/EmployeeEcServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/MenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/AdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/AdminRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/AdminRoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645365363735</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="存储过程脚本，获取部门，添加部门，删除部门接口实现">
+      <created>1645718329862</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1645718329862</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +262,8 @@
     <MESSAGE value="." />
     <MESSAGE value="连接远程数据库" />
     <MESSAGE value="职位管理，职称管理接口实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="职位管理，职称管理接口实现" />
+    <MESSAGE value="存储过程脚本，获取部门，添加部门，删除部门接口实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="存储过程脚本，获取部门，添加部门，删除部门接口实现" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
