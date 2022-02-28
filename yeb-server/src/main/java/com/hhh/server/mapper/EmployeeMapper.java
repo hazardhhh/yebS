@@ -8,6 +8,7 @@ import com.hhh.server.pojo.EmployeeEc;
 import org.apache.ibatis.annotations.Param;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * Mapper 接口
@@ -29,4 +30,12 @@ public interface EmployeeMapper extends BaseMapper<Employee> {
       Page<EmployeeEc> page,
       @Param("employee") Employee employee,
       @Param("beginDateScope") LocalDate[] beginDateScope);
+
+  /**
+   * 查询员工
+   *
+   * @param id
+   * @return
+   */
+  List<Employee> getEmployee(Integer id);
 }
