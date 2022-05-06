@@ -69,6 +69,10 @@ spring:
     host: 120.77.60.161
     # 端口
     port: 5672
+    # 消息失败回调
+    publisher-returns: true
+    # 消息确认回调
+    publisher-confirm-type: correlated
 
 # Mybatis-plus配置
 mybatis-plus:
