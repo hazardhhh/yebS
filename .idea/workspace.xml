@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e42c8bd-9a54-4567-80af-270af41787a6" name="Changes" comment="创建邮件发送服务项目,邮件发送功能实现。">
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/config/RabbitMQConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/MailConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/task/MailTask.java" afterDir="false" />
+    <list default="true" id="0e42c8bd-9a54-4567-80af-270af41787a6" name="Changes" comment="开启消息回调机制，生产端消息投递可靠性实现，消费端幂等性操作">
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/SalarySobCfgController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/java/com/hhh/mail/MailApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/hhh/mail/MailApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/java/com/hhh/mail/MailReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/hhh/mail/MailReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/resources/config/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/resources/config/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/YebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/YebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/SalaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/SalaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/mapper/EmployeeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Salary.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Salary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IEmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/config/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/config/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,8 +133,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.MailApplication" />
         <item itemvalue="Spring Boot.YebApplication" />
+        <item itemvalue="Spring Boot.MailApplication" />
         <item itemvalue="Application.CodeGenerator" />
       </list>
     </recent_temporary>
@@ -167,7 +166,7 @@
       <workItem from="1645193113178" duration="9473000" />
       <workItem from="1645619366173" duration="7901000" />
       <workItem from="1645978486654" duration="2654000" />
-      <workItem from="1651761456584" duration="22576000" />
+      <workItem from="1651761456584" duration="31793000" />
     </task>
     <task id="LOCAL-00001" summary="逆向工程">
       <created>1642529998978</created>
@@ -246,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651822324659</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="开启消息回调机制，生产端消息投递可靠性实现，消费端幂等性操作">
+      <created>1651848304630</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1651848304630</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +292,8 @@
     <MESSAGE value="存储过程脚本，获取部门，添加部门，删除部门接口实现" />
     <MESSAGE value="操作员接口，获取所有员工分页查询，以及员工相应的一些接口实现" />
     <MESSAGE value="创建邮件发送服务项目,邮件发送功能实现。" />
-    <option name="LAST_COMMIT_MESSAGE" value="创建邮件发送服务项目,邮件发送功能实现。" />
+    <MESSAGE value="开启消息回调机制，生产端消息投递可靠性实现，消费端幂等性操作" />
+    <option name="LAST_COMMIT_MESSAGE" value="开启消息回调机制，生产端消息投递可靠性实现，消费端幂等性操作" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
