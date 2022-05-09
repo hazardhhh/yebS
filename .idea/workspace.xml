@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e42c8bd-9a54-4567-80af-270af41787a6" name="Changes" comment="在线聊天 websocket普通配置，有关jwt的配置">
+    <list default="true" id="0e42c8bd-9a54-4567-80af-270af41787a6" name="Changes" comment="邮件定时任务日志一直报有问题，暂时把定时任务注释">
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/config/CustomAuthorityDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/controller/AdminInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/MailLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/MailLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/task/MailTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/task/MailTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MailLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MailLogMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/pojo/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/IAdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/hhh/server/service/impl/AdminServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +75,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -91,7 +93,7 @@
       <recent name="D:\yeb\yeb-server\src\main\resources\config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.MailApplication">
+  <component name="RunManager" selected="Spring Boot.YebApplication">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hhh.generator.CodeGenerator" />
       <module name="yeb-generator" />
@@ -133,8 +135,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.MailApplication" />
         <item itemvalue="Spring Boot.YebApplication" />
+        <item itemvalue="Spring Boot.MailApplication" />
         <item itemvalue="Application.CodeGenerator" />
       </list>
     </recent_temporary>
@@ -166,7 +168,7 @@
       <workItem from="1645193113178" duration="9473000" />
       <workItem from="1645619366173" duration="7901000" />
       <workItem from="1645978486654" duration="2654000" />
-      <workItem from="1651761456584" duration="43248000" />
+      <workItem from="1651761456584" duration="48593000" />
     </task>
     <task id="LOCAL-00001" summary="逆向工程">
       <created>1642529998978</created>
@@ -266,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651944506937</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="邮件定时任务日志一直报有问题，暂时把定时任务注释">
+      <created>1652021386201</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652021386201</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +318,8 @@
     <MESSAGE value="开启消息回调机制，生产端消息投递可靠性实现，消费端幂等性操作" />
     <MESSAGE value="工资账套，员工账套功能实现" />
     <MESSAGE value="在线聊天 websocket普通配置，有关jwt的配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="在线聊天 websocket普通配置，有关jwt的配置" />
+    <MESSAGE value="邮件定时任务日志一直报有问题，暂时把定时任务注释" />
+    <option name="LAST_COMMIT_MESSAGE" value="邮件定时任务日志一直报有问题，暂时把定时任务注释" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
